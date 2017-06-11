@@ -91,13 +91,13 @@ tag7.save()
 
 transaction1 = Transaction.new({
   'value' => 30,
-  'comment' => "Weekly shop",
+  'comment' => "Weekly shop.",
   'tag_id' => 1,
   'merchant_id' => 2
   })
 
 transaction2 = Transaction.new({
-  'value' => 2,
+  'value' => 20,
   'comment' => "Replacement window wipers for car.",
   'tag_id' => 5,
   'merchant_id' => 8

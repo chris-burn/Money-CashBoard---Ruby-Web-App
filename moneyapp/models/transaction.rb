@@ -33,5 +33,23 @@ class Transaction
     return result
   end
 
+  def self.total()
+    sql = "SELECT * from transactions;"
+    total = SqlRunner.run(sql)
+    return total.map {|transaction| transaction['value'].to_i}.sum
+  end
+
+  # def self.total_by_tag(tag)
+  #   sql = "SELECT * FROM transactions INNER JOIN tags ON tags.id = transactions.tag_id WHERE tag = #{@tag_id};"
+  #   total = SqlRunner.run(sql)
+  #   return total.map {|transaction| transaction['value'].to_i}.sum
+  # end
+
+  # def self.total_by_merchant(merchant)
+  #   sql = "SELECT * FROM transactions INNER JOIN merchants ON merchants.id = transactions.merchant_id WHERE merchant = #{@merchant_id};"
+  #   total = SqlRunner.run(sql)
+  #   return total.map {|transaction| transaction['value'].to_i}.sum
+  # end
+
 
 end
