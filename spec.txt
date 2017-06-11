@@ -1,0 +1,80 @@
+Programming & Web Fundamentals
+
+Over the next week you have the chance to consolidate and expand on everything you have learned:
+
+Ruby fundamentals
+TDD (where appropriate)
+OOP
+Web Programming ( REST/MVC )
+Databases with CRUD actions
+MoneyCashboard
+
+You want to start tracking your spending in an attempt to be more frugal with money. You have decided to make a budgeting app to help you see where all of your money is being spent.
+
+You must be able to create new Transactions ( which should include a merchant name, e.g. Tesco, and a value ) which have an associated Tag (e.g. 'food', 'clothes'). Your app would then be able to track a total, and display this in a view.
+
+MVP:
+
+Create new transactions
+Display a list of all transactions
+Display total amount spent
+Display total amount spent by tag
+Possible Extensions:
+
+CRUD actions for the transactions
+Show a warning when the total expenditure is over budget (set a hard coded budget first)
+Add a date to the transactions and view total spending by month
+Any other ideas you might come up with
+Animal Shelter
+
+The Scottish Animal Shelter accepts orphaned or stray animals and takes care of them until they can be adopted by a new owner. The shelter has a list of potential new owners for the animals. Animals may take a while to be trained up and made healthy before being available for adoption.
+
+They are looking for a management system to keep track of their animals and owners.
+
+MVP:
+
+A list of all their animals and their admission date
+Mark an animal as being adoptable/not adoptable
+Assign an animal to a new owner
+List all the owners and their adopted animals
+Possible Extensions:
+
+CRUD actions for animals/owners
+Have separate pages for animals ready for adoption and ones still in training/vet care
+Search for animals by breed/type
+Any other ideas you might come up with
+Big Al's Record Store
+
+The owner of Big Al's Record Store, Big Al, wants an app which will help him keep on top of his store inventory. He does not want an app that customers will see, but he will use to check stock levels and see what he needs to order soon.
+
+You should be able to add stock, which would have an Artist and Album as well as the quantity available.
+
+MVP:
+
+Create albums with the quantity that are in stock
+Create artists
+Show an inventory page listing albums and artists
+Show a stock level for the inventory items e.g. High/Medium/Low
+Possible Extensions:
+
+Add a buy and sell price to each stock item
+Calculate the possible markup on items and show on inventory page
+Add a genre to an Album
+Any other ideas you might come up with
+Burger Tracker
+
+Jarrod has an insatiable hunger for burgers. However, he only has a limited budget, so prefers to go to places that have a deal on. He would like a way to track which deals are available at which places on a given day so that he can maximise his burger intake for minimum spending.
+
+MVP:
+
+Add a burger eatery
+Add burgers available at an eatery and view them as a list
+Add a list of deals for an eatery where a deal has
+Label string e.g. "Two For One Tuesdays"
+A list of burgers that deal applies to
+The day that the deal is available on e.g. "Wednesday"
+Possible Extensions:
+
+Show the deals available by day of the week Mon - Sun
+Add a price to a burger and add a savings amount/percentage to a deal so it's clear how much Steven is saving
+Any other ideas you might come up with
