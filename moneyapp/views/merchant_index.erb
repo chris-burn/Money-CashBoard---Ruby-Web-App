@@ -1,3 +1,11 @@
-<h1><strong>Welcome to Money Cashboard!</strong></h1>
 
 <h2>All Merchants:</h2>
+
+<% @merchants.each do |merchant| %>
+  <p>Name: <strong><%= merchant.name%></strong></p>
+  <p>Location: <strong><%= merchant.location%></strong></p>
+  <h4><a href="/merchant/<%=merchant.id%>">Full Merchant Info</a></h4>
+  <hr />
+<% end %>
+
+<h3><a href="/merchant/new">Save New Merchant</a></h3>

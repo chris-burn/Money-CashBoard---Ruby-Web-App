@@ -1,0 +1,10 @@
+
+<h2>All Tags:</h2>
+
+<% @tags.each do |tag| %>
+  <p>Name: <strong><%= tag.name%></strong></p>
+  <h4><a href="/tag/<%=tag.id%>">Full Tag Info</a></h4>
+  <hr />
+<% end %>
+
+<h3><a href="/tag/new">Save New Tag</a></h3>

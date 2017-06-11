@@ -51,5 +51,13 @@ class Transaction
   #   return total.map {|transaction| transaction['value'].to_i}.sum
   # end
 
+  def tags()
+    sql = "SELECT * FROM tags WHERE id = #{@tag_id};"
+    tags = SqlRunner.run(sql)
+    result = Tag.new(tags.first)
+    return result
+  end
+
+
 
 end

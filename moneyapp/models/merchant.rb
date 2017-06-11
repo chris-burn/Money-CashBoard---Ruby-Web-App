@@ -30,6 +30,10 @@ class Merchant
     return result
   end
 
+  def 
+
+
+
 
 
 end
