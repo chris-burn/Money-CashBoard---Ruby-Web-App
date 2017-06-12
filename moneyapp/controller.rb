@@ -49,6 +49,7 @@ end
 
 get '/tags' do
   @tags = Tag.all
+  @transactions = Transaction.all
   erb(:tag_index)
 end
 

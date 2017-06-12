@@ -4,9 +4,10 @@
 <h2>All Merchants:</h2>
 
 <% @merchants.each do |merchant| %>
-  <p>Name: <strong><%= merchant.name%></strong></p>
+  <p><strong><%= merchant.name%></strong></p>
   <p>Location: <strong><%= merchant.location%></strong></p>
-  <h4><a href="/merchant/<%=merchant.id%>">Full Merchant Info</a></h4>
+  <p>Current spend by Merchant: <strong>£<%= Transaction.total_by_merchant(merchant.id) %></strong></p>
+  <h4><a href="/merchant/<%=merchant.id%>">Merchant Profile</a></h4>
   <hr />
 <% end %>
 

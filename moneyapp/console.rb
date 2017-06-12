@@ -92,57 +92,57 @@ tag7.save()
 transaction1 = Transaction.new({
   'value' => 30,
   'comment' => "Weekly shop.",
-  'tag_id' => 1,
-  'merchant_id' => 2
+  'tag_id' => tag1.id,
+  'merchant_id' => merchant2.id
   })
 
 transaction2 = Transaction.new({
   'value' => 20,
   'comment' => "Replacement window wipers for car.",
-  'tag_id' => 5,
-  'merchant_id' => 8
+  'tag_id' => tag5.id,
+  'merchant_id' => merchant8.id
   })
 
 transaction3 = Transaction.new({
   'value' => 15,
   'comment' => "Mid-week takeaway.",
-  'tag_id' => 4,
-  'merchant_id' => 4
+  'tag_id' => tag4.id,
+  'merchant_id' => merchant4.id
   })
 
 transaction4 = Transaction.new({
   'value' => 40,
   'comment' => "Night out with mates.",
-  'tag_id' => 7,
-  'merchant_id' => 5
+  'tag_id' => tag7.id,
+  'merchant_id' => merchant5.id
   })
 
 transaction5 = Transaction.new({
   'value' => 50,
   'comment' => "Train tickets to Glasgow.",
-  'tag_id' => 6,
-  'merchant_id' => 7
+  'tag_id' => tag6.id,
+  'merchant_id' => merchant7.id
   })
 
 transaction6 = Transaction.new({
   'value' => 45,
   'comment' => "Weekly shop.",
-  'tag_id' => 1,
-  'merchant_id' => 1
+  'tag_id' => tag1.id,
+  'merchant_id' => merchant1.id
   })
 
 transaction7 = Transaction.new({
   'value' => 50,
   'comment' => "CDs and Blu-Ray for sisters birthday.",
-  'tag_id' => 2,
-  'merchant_id' => 6
+  'tag_id' => tag2.id,
+  'merchant_id' => merchant6.id
   })
 
 transaction8 = Transaction.new({
   'value' => 80,
   'comment' => "Paint for home decoration.",
-  'tag_id' => 3,
-  'merchant_id' => 3
+  'tag_id' => tag3.id,
+  'merchant_id' => merchant3.id
   })
 
 transaction1.save()
