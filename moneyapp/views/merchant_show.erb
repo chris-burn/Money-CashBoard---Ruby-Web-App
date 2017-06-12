@@ -2,3 +2,11 @@
 
 <p>Name: <strong><%= @merchants.name%></strong></p>
 <p>Location: <%= @merchants.location%></p> 
+
+<form action="/merchant/<%= @merchants.id %>/edit" method="GET">
+  <input type="submit" value="Edit Merchant">
+</form>
+
+<form action="/merchant/<%= @merchants.id %>/delete" method="POST">
+  <input type="submit" value="Delete Merchant">
+</form>

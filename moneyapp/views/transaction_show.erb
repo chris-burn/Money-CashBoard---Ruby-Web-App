@@ -4,3 +4,12 @@
 <p>Comment: <strong><%= @transactions.comment%></strong></p> 
 <p>Tag: <strong><%= @transactions.tags.name %></p></strong></p>
 <p>Merchant ID: <strong><%= @transactions.merchants.name %></strong></p> 
+
+<form action="/transaction/<%= @transactions.id %>/edit" method="GET">
+  <input type="submit" value="Edit Transaction">
+</form>
+
+
+<form action="/transaction/<%= @transactions.id %>/delete" method="POST">
+  <input type="submit" value="Delete Transaction">
+</form>

@@ -65,8 +65,18 @@ class Transaction
     return result
   end
 
+  def update(options)
+    sql = "UPDATE transactions SET
+      value = '#{ options['value'] }',
+      comment = '#{ options['comment'] }', tag_id = #{ options['tag_id']}, merchant_id = #{ options['merchant_id']}
+      WHERE id = '#{ options['id'] }';"
+    SqlRunner.run( sql )
+  end
 
-
+  def delete()
+    sql = "DELETE FROM transactions WHERE id=#{ @id };"
+    SqlRunner.run( sql )
+  end
 
 
 

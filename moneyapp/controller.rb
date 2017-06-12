@@ -94,6 +94,40 @@ post '/tag/:id' do
   erb(:tag_update)
 end
 
+get '/transaction/:id/edit' do
+  @transaction = Transaction.find(params[:id])
+  @merchants = Merchant.all
+  @tags = Tag.all
+  erb(:transaction_edit)
+end
+
+post '/transaction/:id' do
+  @transaction = Transaction.new(params)
+  @transaction.update(params)
+  erb(:transaction_update)
+end
+
+post '/transaction/:id/delete' do
+  @transaction = Transaction.find(params[:id])
+  @transaction.delete()
+  redirect to "/transactions"
+end
+
+post '/merchant/:id/delete' do
+  @merchant = Merchant.find(params[:id])
+  @merchant.delete()
+  redirect to "/merchants"
+end
+
+post '/tag/:id/delete' do
+  @tag = Tag.find(params[:id])
+  @tag.delete()
+  redirect to "/tags"
+end
+
+
+
+
 # get '/admin' do
 #   @admin = Admin.all
 #   erb(:admin)

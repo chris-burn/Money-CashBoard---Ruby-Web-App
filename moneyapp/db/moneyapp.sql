@@ -17,6 +17,6 @@ CREATE TABLE transactions (
 id SERIAL8 PRIMARY KEY,
 value INT8,
 comment VARCHAR(255),
-tag_id INT8 REFERENCES tags(id),
-merchant_id INT8 REFERENCES merchants(id)
+tag_id INT8 REFERENCES tags(id) ON DELETE CASCADE,
+merchant_id INT8 REFERENCES merchants(id) ON DELETE CASCADE
 );
