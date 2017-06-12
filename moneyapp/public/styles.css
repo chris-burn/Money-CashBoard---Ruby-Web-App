@@ -5,3 +5,7 @@ html {
 ul {
   list-style-type: none;
 }
+
+/*input,button {
+    vertical-align: top;
+}*/

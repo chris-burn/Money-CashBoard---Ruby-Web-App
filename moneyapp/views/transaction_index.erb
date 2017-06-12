@@ -1,14 +1,16 @@
 
+<h3><a href="/transaction/new">Save New Transaction</a></h3>
+
 <h2>All Transactions:</h2>
 
 <% @transactions.each do |transaction| %>
-  <p>Value: <strong><%= transaction.value%></strong></p>
+  <p>Value: <strong>£<%= transaction.value%></strong></p>
   <p>Comment: <strong><%= transaction.comment%></strong></p>
-  <p>Tag ID: <strong><%= transaction.tag_id%></strong></p>
-  <p>Merchant ID: <strong><%= transaction.merchant_id%></strong></p>
+  <p>Tag: <strong><%= transaction.tags.name %></strong></p>
+  <p>Merchant: <strong><%= transaction.merchants.name %></strong></p>
   <h4><a href="/transaction/<%=transaction.id%>">Full Transaction Info</a></h4>
   <hr />
 <% end %>
 
-<h3><a href="/transaction/new">Save New Transaction</a></h3>
+
 

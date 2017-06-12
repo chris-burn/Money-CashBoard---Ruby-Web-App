@@ -30,9 +30,13 @@ class Merchant
     return result
   end
 
-  def 
-
-
+  def update(options)
+    sql = "UPDATE merchants SET
+      name = '#{ options['name'] }',
+      location = '#{ options['location'] }'  
+      WHERE id = '#{ options['id'] }';"
+    SqlRunner.run( sql )
+  end
 
 
 

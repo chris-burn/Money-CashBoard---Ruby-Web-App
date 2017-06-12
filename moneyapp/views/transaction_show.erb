@@ -1,6 +1,6 @@
 <h1>Transaction Info</h1>
 
-<p>Value: <strong><%= @transactions.value%></strong></p>
-<p>Comment: <%= @transactions.comment%></p> 
-<p>Tag ID: <%= @transactions.tag_id %></p>
-<p>Merchant ID: <%= @transactions.merchant_id%></p> 
+<p>Value: <strong>£<%= @transactions.value%></strong></p>
+<p>Comment: <strong><%= @transactions.comment%></strong></p> 
+<p>Tag: <strong><%= @transactions.tags.name %></p></strong></p>
+<p>Merchant ID: <strong><%= @transactions.merchants.name %></strong></p> 

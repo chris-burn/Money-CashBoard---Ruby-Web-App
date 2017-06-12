@@ -134,8 +134,8 @@ transaction6 = Transaction.new({
 transaction7 = Transaction.new({
   'value' => 50,
   'comment' => "CDs and Blu-Ray for sisters birthday.",
-  'tag_id' => 6,
-  'merchant_id' => 7
+  'tag_id' => 2,
+  'merchant_id' => 6
   })
 
 transaction8 = Transaction.new({

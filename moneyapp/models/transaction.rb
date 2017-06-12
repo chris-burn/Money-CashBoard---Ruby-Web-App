@@ -58,6 +58,16 @@ class Transaction
     return result
   end
 
+  def merchants()
+    sql = "SELECT * FROM merchants WHERE id = #{@merchant_id};"
+    merchants = SqlRunner.run(sql)
+    result = Merchant.new(merchants.first)
+    return result
+  end
+
+
+
+
 
 
 end
