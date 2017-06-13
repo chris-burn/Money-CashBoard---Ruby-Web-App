@@ -1,6 +1,8 @@
 require_relative './models/merchant'
 require_relative './models/tag'
 require_relative './models/transaction'
+require_relative './models/user'
+
 require 'pry-byebug'
 
 merchant1 = Merchant.new({
@@ -90,56 +92,64 @@ tag7.save()
 
 
 transaction1 = Transaction.new({
-  'value' => 30,
+  'value' => 30.00,
+  'date_id' => "06/04/2017",
   'comment' => "Weekly shop.",
   'tag_id' => tag1.id,
   'merchant_id' => merchant2.id
   })
 
 transaction2 = Transaction.new({
-  'value' => 20,
+  'value' => 19.99,
+  'date_id' => "06/05/2017",
   'comment' => "Replacement window wipers for car.",
   'tag_id' => tag5.id,
   'merchant_id' => merchant8.id
   })
 
 transaction3 = Transaction.new({
-  'value' => 15,
+  'value' => 15.50,
+  'date_id' => "05/27/2017",
   'comment' => "Mid-week takeaway.",
   'tag_id' => tag4.id,
   'merchant_id' => merchant4.id
   })
 
 transaction4 = Transaction.new({
-  'value' => 40,
+  'value' => 50,
+  'date_id' => "05/21/2017",
   'comment' => "Night out with mates.",
   'tag_id' => tag7.id,
   'merchant_id' => merchant5.id
   })
 
 transaction5 = Transaction.new({
-  'value' => 50,
+  'value' => 39.99,
+  'date_id' => "05/20/2017",
   'comment' => "Train tickets to Glasgow.",
   'tag_id' => tag6.id,
   'merchant_id' => merchant7.id
   })
 
 transaction6 = Transaction.new({
-  'value' => 45,
+  'value' => 45.20,
+  'date_id' => "05/30/2017",
   'comment' => "Weekly shop.",
   'tag_id' => tag1.id,
   'merchant_id' => merchant1.id
   })
 
 transaction7 = Transaction.new({
-  'value' => 50,
+  'value' => 40,
+  'date_id' => "05/28/2017",
   'comment' => "CDs and Blu-Ray for sisters birthday.",
   'tag_id' => tag2.id,
   'merchant_id' => merchant6.id
   })
 
 transaction8 = Transaction.new({
-  'value' => 80,
+  'value' => 70.60,
+  'date_id' => "06/01/2017",
   'comment' => "Paint for home decoration.",
   'tag_id' => tag3.id,
   'merchant_id' => merchant3.id
@@ -153,6 +163,13 @@ transaction5.save()
 transaction6.save()
 transaction7.save()
 transaction8.save()
+
+
+user1 = User.new({
+  'budget' => 500
+  })
+
+user1.save()
 
 
 binding pry

@@ -1,26 +1,33 @@
 <h2>Edit Transaction:</h2>
 
 <form action="/transaction/<%= @transaction.id%>" method="POST">
-
+    <div>
     <label for="value">Value:</label>
     <input type="number" id= "value" name="value" value="<%= @transaction.value %>">
+    </div>
 
+    <div>
     <label for="comment">Comment:</label>
     <input type="text" id="comment" name="comment" value="<%= @transaction.comment %>">
+    </div>
 
+    <div>
     <label for="tag_select">Select Transaction tag:</label>
     <select name="tag_id" id="tag_select"><% @tags.each do |tag| %>
       <option selected value="<%= @transaction.tag_id%>"><%= @transaction.tags.name %></option>
       <option value="<%= tag.id%>"><%=tag.name%></option>
       <% end%>
     </select> 
+    </div>
 
+    <div>
     <label for="merchant_select">Select Merchant:</label>
     <select name="merchant_id" id="merchant_select"><% @merchants.each do |merchant| %>
       <option selected value="<%= @transaction.merchant_id%>"><%= @transaction.merchants.name %></option>
       <option value="<%= merchant.id%>"><%=merchant.name%></option>
       <% end%>
     </select>
+    </div>
 
   <input type="submit" value="Update">
 </form>

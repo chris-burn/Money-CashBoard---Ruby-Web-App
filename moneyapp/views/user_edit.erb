@@ -1,0 +1,9 @@
+<form action="/user/<%= @user.id%>" method="POST">
+    
+    <div>
+    <label for="budget">New Budget:</label>
+    <input type="number" id= "budget" name="budget" value="<%= @user.budget %>">
+    </div>
+
+    <input type="submit" value="Update">
+</form>

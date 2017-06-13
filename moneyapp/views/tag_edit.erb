@@ -1,6 +1,9 @@
 <form action="/tag/<%= @tag.id%>" method="POST">
+    
+    <div>
     <label for="name">Name:</label>
     <input type="text" id= "name" name="name" value="<%= @tag.name %>">
-
+    </div>
+    
     <input type="submit" value="Update">
 </form>

@@ -3,12 +3,12 @@ require 'pry-byebug'
 
 class Transaction
 
-  attr_accessor :id, :value, :comment, :tag_id, :merchant_id
+  attr_accessor :id, :value, :date_id, :comment, :tag_id, :merchant_id
 
   def initialize(options)
     @id = options['id'].to_i() if options['id']
-    @value = options['value']
-    # @date = options['date'].to_i() if options['date']
+    @value = options['value'].to_i if options['value']
+    @date_id = options['date_id']
     @comment = options['comment']
     @tag_id = options['tag_id'].to_i()
     @merchant_id = options['merchant_id'].to_i()
@@ -21,7 +21,7 @@ class Transaction
   end
 
   def save()
-    sql = "INSERT INTO transactions (value, comment, tag_id, merchant_id) VALUES (#{@value}, '#{comment}', #{@tag_id}, #{@merchant_id}) RETURNING *;"
+    sql = "INSERT INTO transactions (value, date_id, comment, tag_id, merchant_id) VALUES (#{@value}, '#{date_id}', '#{comment}', #{@tag_id}, #{@merchant_id}) RETURNING *;"
     result = SqlRunner.run(sql)
     @id = result[0]['id'].to_i()
   end
@@ -67,7 +67,7 @@ class Transaction
 
   def update(options)
     sql = "UPDATE transactions SET
-      value = '#{ options['value'] }',
+      value = '#{ options['value'] }', date_id = '#{ options['date_id']}',
       comment = '#{ options['comment'] }', tag_id = #{ options['tag_id']}, merchant_id = #{ options['merchant_id']}
       WHERE id = '#{ options['id'] }';"
     SqlRunner.run( sql )
@@ -77,6 +77,18 @@ class Transaction
     sql = "DELETE FROM transactions WHERE id=#{ @id };"
     SqlRunner.run( sql )
   end
+
+  def pretty_date()
+    return  DateTime.parse(@date_id).strftime("%d/%m/%Y")
+  end
+
+  # def dec_places()
+  #   result = sprintf "%.2f", @value
+  #   return result
+  # end
+
+  
+
 
 
 

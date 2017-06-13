@@ -2,23 +2,36 @@
 <h2>Add New Transaction:</h2>
 
 <form action="/transactions" method="POST">
-  <label for="value">Value:</label>
-  <input type="number" id="value" name="value">
+  <div>
+  <label for="value">Enter Value (will round):</label>
+  <input type="number" step="any" id="value" name="value">
+  </div>
   
+  <div>
+  <label for="date_id">Enter Date:</label>
+  <input type="date" id="date_id" name="date_id">
+  </div>
+
+  <div>
   <label for="comment">Enter Comment:</label>
   <input type="text" id="comment" name="comment">
+  </div>
   
+  <div>
   <label for="tag_select">Select Transaction tag:</label>
   <select name="tag_id" id="tag_select"><% @tags.each do |tag| %>
     <option value="<%= tag.id%>"><%=tag.name%></option>
     <% end%>
   </select> 
+  </div>
 
+  <div>
   <label for="merchant_select">Select Merchant:</label>
   <select name="merchant_id" id="merchant_select"><% @merchants.each do |merchant| %>
     <option value="<%= merchant.id%>"><%=merchant.name%></option>
     <% end%>
   </select>
+  </div>
 
 <input type="submit" value="Save">
 

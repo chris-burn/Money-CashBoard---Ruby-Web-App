@@ -1,0 +1,10 @@
+<h1>User Profile</h1>
+
+<h3>Budget: <strong>£<%= @user.budget%></strong></h3>
+
+<div>
+<form action="/user/<%= @user.id %>/edit" method="GET">
+  <input type="submit" value="Edit Budget">
+</form>
+</div>
+

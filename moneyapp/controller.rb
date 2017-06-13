@@ -5,6 +5,7 @@ require ('pry-byebug')
 require_relative ('models/merchant')
 require_relative ('models/tag')
 require_relative ('models/transaction')
+require_relative ('models/user')
 
 get '/' do
   erb(:home)
@@ -62,10 +63,6 @@ get '/tag/new' do
   erb(:tag_new)
 end
 
-get '/tag/:id' do
-  @tags = Tag.find(params[:id])
-  erb(:tag_show)
-end
 
 post '/tags' do
   @tag = Tag.new(params)
@@ -126,11 +123,25 @@ post '/tag/:id/delete' do
   redirect to "/tags"
 end
 
-
-
-
-# get '/admin' do
-#   @admin = Admin.all
-#   erb(:admin)
+# get '/user' do
+#   @users = User.all
+#   erb(:user_index)
 # end
+
+get '/user/:id' do
+  @user = User.find(params[:id])
+  erb(:user_index)
+end
+
+get '/user/:id/edit' do
+  @user = User.find(params[:id])
+  erb(:user_edit)
+end
+
+post '/user/:id' do
+  @user = User.new(params)
+  @user.update(params)
+  erb(:user_update)
+end
+
 

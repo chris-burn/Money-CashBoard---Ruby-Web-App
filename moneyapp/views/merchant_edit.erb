@@ -1,9 +1,14 @@
 <form action="/merchant/<%= @merchant.id%>" method="POST">
+    
+    <div>
     <label for="name">Name:</label>
     <input type="text" id= "name" name="name" value="<%= @merchant.name %>">
+    </div>
 
+    <div>
     <label for="location">Location:</label>
     <input type="text" id="location" name="location" value="<%= @merchant.location %>">
+    </div>
 
     <input type="submit" value="Update">
 </form>

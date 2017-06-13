@@ -1,10 +1,11 @@
 
 <h3><a href="/transaction/new">Save New Transaction</a></h3>
 
-<h2>All Transactions:</h2>
+<h2>Transactions:</h2>
 
 <% @transactions.each do |transaction| %>
-  <p>Value: <strong>£<%= transaction.value%></strong></p>
+  <p>Value: <strong>£<%= transaction.value %></strong></p>
+  <p>Date: <strong><%= transaction.pretty_date() %></strong></p>
   <p>Comment: <strong><%= transaction.comment%></strong></p>
   <p>Tag: <strong><%= transaction.tags.name %></strong></p>
   <p>Merchant: <strong><%= transaction.merchants.name %></strong></p>
