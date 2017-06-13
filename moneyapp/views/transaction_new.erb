@@ -18,19 +18,21 @@
   </div>
   
   <div>
-  <label for="tag_select">Select Transaction tag:</label>
+  <label for="tag_select">Select Transaction tag: </label> 
   <select name="tag_id" id="tag_select"><% @tags.each do |tag| %>
     <option value="<%= tag.id%>"><%=tag.name%></option>
     <% end%>
   </select> 
+  <a href="/tag/new">new</a>
   </div>
 
   <div>
-  <label for="merchant_select">Select Merchant:</label>
+  <label for="merchant_select">Select Merchant: </label>
   <select name="merchant_id" id="merchant_select"><% @merchants.each do |merchant| %>
     <option value="<%= merchant.id%>"><%=merchant.name%></option>
     <% end%>
   </select>
+  <a href="/merchant/new">new</a> 
   </div>
 
 <input type="submit" value="Save">

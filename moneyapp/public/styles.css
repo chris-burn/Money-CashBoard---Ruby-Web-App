@@ -1,3 +1,56 @@
+.grid {
+  border: solid 1px lightblue;
+  justify-content: space-around;
+}
+
+.grid-row {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.grid-row-sm1 .cell {
+  flex: 1;
+  padding: 15px;
+  border: solid 1px lightblue;
+  background-image: url('2.jpg');
+  background-size: cover;
+  background-position: bottom;
+  height: 350px;
+}
+
+.grid-row-sm1 h3 {
+  position: absolute;
+  bottom: 220px;
+  font-family: 'Lobster', cursive;
+  font-size: 30px
+}
+
+.cell {
+  flex: 1;
+  padding: 15px;
+  border: solid 1px lightblue;
+}
+
+
+@media all and ( min-width: 600px ) {
+  .grid-row-sm {
+    flex-direction: row;
+  }
+}
+
+@media all and ( min-width: 670px ) {
+  .grid-row-md {
+    flex-direction: row;
+  }
+}
+
+@media all and ( min-width: 960px ) {
+  .grid-row-lg {
+    flex-direction: row;
+  }
+}
+
 html {
   font-family: sans-serif
 }
@@ -6,6 +59,10 @@ ul {
   list-style-type: none;
 }
 
-/*input,button {
-    vertical-align: top;
-}*/
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

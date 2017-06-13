@@ -3,18 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" type="text/css" href="/styles.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 </head>
 <body>  
-  <nav>
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/transactions">Transactions</a></li>
-      <li><a href="/merchants">Merchants</a></li>
-      <li><a href="/tags">Tags</a></li>
-      <li><a href="/user/1">Budget</a></li>
-    </ul>
-  </nav>
-<%= yield%>
+  <div class="grid">
+    <div class="grid-row grid-row-sm1">
+      <div class="cell">
+      <h3>"A fool may earn money, but it takes a wise man to keep it" - English Proverb</h3>
+    </div>
+    </div>
+    <div class="grid-row grid-row-md">
+      <div class="cell">
+        <ul>
+          <li><a href="/">Home</a></li>
+          </ul>
+      </div>
+      <div class="cell">
+        <ul>
+          <li><a href="/transactions">Transactions</a></li>
+        </ul>  
+      </div>
+      <div class="cell">
+        <ul><li><a href="/merchants">Merchants</a></li>
+        </ul>
+      </div>
+      <div class="cell">
+        <ul><li><a href="/tags">Tags</a></li>
+        </ul>
+      </div>
+      <div class="cell">
+        <ul><li><a href="/user/1">Budget</a>
+        </ul>
+      </div>
+    </div>
+    <div class="grid-row grid-row-sm">
+      <%= yield%>
+    </div>
+  </div>
+
 </body>
 </html>

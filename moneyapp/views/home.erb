@@ -1,19 +1,26 @@
+
+
+<div class="cell"> 
 <h1><strong>Welcome to MoneyCashboard!</strong></h1>
+  <h3>CURRENT SPEND TOTAL (rounded-up): £<%= Transaction.total %> </h3>
+  <h3>BUDGET: £<%= User.total %>  <a href="/user/1">update</a></h3>
 
-<h3>CURRENT SPEND TOTAL (rounded-up): £<%= Transaction.total %> </h3>
-<h3>BUDGET: £<%= User.total %></h3>
+  <h4>Budget remaining: £<%= User.total - Transaction.total %></h4>
+</div>
 
-
+<div class="cell">
 <h3>WHAT WOULD YOU LIKE TO DO TODAY?</h3>
 
-<h3>Key functions:</h3>
+  <h3><a href="/transactions">All Transactions</a></h3>
 
-<h3><a href="/transactions">All Transactions</a></h3>
+  <h3><a href="/tags">Transactions Breakdown by Tag</a></h3>
 
-<h3><a href="/tags">Transactions Breakdown by Tag</a></h3>
+  <h3><a href="/merchants">Transactions Breakdown by Merchant</a></h3>
 
-<h3><a href="/merchants">Transactions Breakdown by Merchant</a></h3>
+  <h3><a href="/transaction/new">New Transaction</a></h3>
 
-<h3><a href="/transaction/new">New Transaction</a></h3>
+  <h3><a href="/merchant/new">New Merchant</a></h3>
+</div>
 
-<h3><a href="/merchant/new">New Merchant</a></h3>
+
+

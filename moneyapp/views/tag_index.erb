@@ -6,7 +6,7 @@
 
 <% @tags.each do |tag| %>
   <h4><strong><%= tag.name%></strong></h4>
-  <p>Current spend by tag: <strong>£<%= Transaction.total_by_tag(tag.id).to_f %></strong></p>
+  <p>Current spend by tag: <strong>£<%= Transaction.total_by_tag(tag.id) %></strong></p>
   <h4><a href="/tag/<%=tag.id%>">Tag Profile</a></h4>
   <hr />
 <% end %>
