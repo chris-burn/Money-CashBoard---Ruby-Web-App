@@ -1,7 +1,8 @@
+<div class="cell"> 
 
 <h3><a href="/merchant/new">Save New Merchant</a></h3>
 
-<h2>Merchants:</h2>
+<h3>Merchants:</h3>
 
 <% @merchants.each do |merchant| %>
   <p><strong><%= merchant.name%></strong></p>
@@ -10,4 +11,6 @@
   <h4><a href="/merchant/<%=merchant.id%>">Merchant Profile</a></h4>
   <hr />
 <% end %>
+</div>
+
 

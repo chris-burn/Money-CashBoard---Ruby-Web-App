@@ -1,7 +1,27 @@
-
+<div class="cell"> 
 <h3><a href="/transaction/new">Save New Transaction</a></h3>
 
-<h2>Transactions:</h2>
+<h3>Transactions:</h3>
+
+<!-- <table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  
+</table> -->
 
 <% @transactions.each do |transaction| %>
   <p>Value: <strong>£<%= transaction.value %></strong></p>
@@ -13,5 +33,6 @@
   <hr />
 <% end %>
 
+</div>  
 
 

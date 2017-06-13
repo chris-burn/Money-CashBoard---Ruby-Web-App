@@ -81,6 +81,11 @@ post '/merchant/:id' do
   erb(:merchant_update)
 end
 
+get '/tag/:id' do
+  @tags = Tag.find(params[:id])
+  erb(:tag_show)
+end
+
 get '/tag/:id/edit' do
   @tag = Tag.find(params[:id])
   erb(:tag_edit)
@@ -123,10 +128,6 @@ post '/tag/:id/delete' do
   redirect to "/tags"
 end
 
-# get '/user' do
-#   @users = User.all
-#   erb(:user_index)
-# end
 
 get '/user/:id' do
   @user = User.find(params[:id])

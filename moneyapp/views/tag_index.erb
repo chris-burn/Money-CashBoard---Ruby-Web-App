@@ -1,8 +1,8 @@
-
+<div class="cell"> 
 
 <h3><a href="/tag/new">Save New Tag</a></h3>
 
-<h2>Tags:</h2>
+<h3>Tags:</h3>
 
 <% @tags.each do |tag| %>
   <h4><strong><%= tag.name%></strong></h4>
@@ -10,4 +10,6 @@
   <h4><a href="/tag/<%=tag.id%>">Tag Profile</a></h4>
   <hr />
 <% end %>
+
+</div>  
 

@@ -1,14 +1,21 @@
-<h2>Edit Transaction:</h2>
+<div class="cell"> 
+
+<h3>Edit Transaction:</h3>
 
 <form action="/transaction/<%= @transaction.id%>" method="POST">
     <div>
     <label for="value">Value:</label>
-    <input type="number" id= "value" name="value" value="<%= @transaction.value %>">
+    <input type="number" id= "value" name="value" value="<%= @transaction.value %>" required>
+    </div>
+
+    <div>
+    <label for="date_id">Enter Date:</label>
+    <input type="date" id="date_id" name="date_id" value="<%= @transaction.pretty_date()%>" required>
     </div>
 
     <div>
     <label for="comment">Comment:</label>
-    <input type="text" id="comment" name="comment" value="<%= @transaction.comment %>">
+    <input type="text" id="comment" name="comment" value="<%= @transaction.comment %>" required>
     </div>
 
     <div>
@@ -31,3 +38,5 @@
 
   <input type="submit" value="Update">
 </form>
+
+</div>  

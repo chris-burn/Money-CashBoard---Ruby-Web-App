@@ -1,4 +1,6 @@
-<h1>User Profile</h1>
+<div class="cell"> 
+
+<h2>User Profile</h2>
 
 <h3>Budget: <strong>£<%= @user.budget%></strong></h3>
 
@@ -6,5 +8,7 @@
 <form action="/user/<%= @user.id %>/edit" method="GET">
   <input type="submit" value="Edit Budget">
 </form>
+</div>
+
 </div>
 

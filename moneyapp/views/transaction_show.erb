@@ -1,7 +1,9 @@
+<div class="cell"> 
+
 <h1>Transaction Profile</h1>
 
-<p>Value: <strong>£<%= @transactions.total%></strong></p>
-<p>Date: <strong><%= @transactions.date_id%></strong></p>
+<p>Value: <strong>£<%= @transactions.value%></strong></p>
+<p>Date: <strong><%= @transactions.pretty_date%></strong></p>
 <p>Comment: <strong><%= @transactions.comment%></strong></p> 
 <p>Tag: <strong><%= @transactions.tags.name %></p></strong></p>
 <p>Merchant ID: <strong><%= @transactions.merchants.name %></strong></p> 
@@ -14,3 +16,4 @@
 <form action="/transaction/<%= @transactions.id %>/delete" method="POST">
   <input type="submit" value="Delete Transaction">
 </form>
+</div>

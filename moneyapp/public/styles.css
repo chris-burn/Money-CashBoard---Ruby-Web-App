@@ -6,7 +6,7 @@
 .grid-row {
   display: flex;
   flex-direction: column;
-
+  justify-content: space-around;
 }
 
 .grid-row-sm1 .cell {
@@ -21,10 +21,28 @@
 
 .grid-row-sm1 h3 {
   position: absolute;
-  bottom: 220px;
+  bottom: 250px;
   font-family: 'Lobster', cursive;
-  font-size: 30px
+  font-size: 30px;
 }
+
+.grid-row-md .cell {
+  background-color: powderblue;
+}
+
+.grid-row-sm .cell {
+  background-color: lightcyan;
+}
+
+ul {
+  display: flex;
+}
+
+li {
+  flex: 1;
+  font-weight: bold;
+}
+
 
 .cell {
   flex: 1;

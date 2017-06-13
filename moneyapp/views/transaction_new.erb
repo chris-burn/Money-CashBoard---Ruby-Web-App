@@ -1,20 +1,21 @@
+<div class="cell"> 
 
-<h2>Add New Transaction:</h2>
+<h3>Add New Transaction:</h3>
 
 <form action="/transactions" method="POST">
   <div>
   <label for="value">Enter Value (will round):</label>
-  <input type="number" step="any" id="value" name="value">
+  <input type="number" step="any" id="value" name="value" required>
   </div>
   
   <div>
   <label for="date_id">Enter Date:</label>
-  <input type="date" id="date_id" name="date_id">
+  <input type="date" id="date_id" name="date_id" required>
   </div>
 
   <div>
   <label for="comment">Enter Comment:</label>
-  <input type="text" id="comment" name="comment">
+  <input type="text" id="comment" name="comment" required>
   </div>
   
   <div>
@@ -39,5 +40,6 @@
 
 </form>
 
+</div>
 
 
