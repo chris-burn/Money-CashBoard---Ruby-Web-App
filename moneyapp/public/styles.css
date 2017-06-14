@@ -1,12 +1,10 @@
 .grid {
   border: solid 1px lightblue;
-  justify-content: space-around;
 }
 
 .grid-row {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  flex-direction: row;
 }
 
 .grid-row-sm1 .cell {
@@ -60,6 +58,7 @@ li {
 @media all and ( min-width: 670px ) {
   .grid-row-md {
     flex-direction: row;
+    justify-content: flex-start;
   }
 }
 
