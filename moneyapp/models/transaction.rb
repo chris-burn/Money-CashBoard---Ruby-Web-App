@@ -14,6 +14,7 @@ class Transaction
     @merchant_id = options['merchant_id'].to_i()
   end
 
+
   def self.all()
     sql = "SELECT * FROM transactions;"
     transactions = SqlRunner.run(sql)
@@ -45,9 +46,16 @@ class Transaction
     return total.map {|transaction| transaction['value'].to_i}.sum
   end
 
+
+  #make a Class method on Transaction Class to dislay Transaction value by Merchant from Merchant Class.
+    
   def self.total_by_merchant(id)
+    #write SQL to join Tranasction and Merchant database tables against ID(Transaction) and Merchant ID(Merchant)
     sql = "SELECT * FROM transactions INNER JOIN merchants ON merchants.id = transactions.merchant_id WHERE merchant_id = #{id};"
+    #assign local variable to running of SQL code through SqlRunner Class Ruby file
     total = SqlRunner.run(sql)
+    #return "total" variable and 'map'/loop 'total' to pull out individual transactions
+    #sum all 'value' properties (coverted to Integer) of Transactions called 
     return total.map {|transaction| transaction['value'].to_i}.sum
   end
 
@@ -78,9 +86,14 @@ class Transaction
     SqlRunner.run( sql )
   end
 
+
   def pretty_date()
     return  DateTime.parse(@date_id).strftime("%d/%m/%Y")
   end
+
+  def self.sort_by_date
+    sql = "SELECT * FROM transactions ORDER BY date_id;"
+   end
 
   # def dec_places()
   #   result = sprintf "%.2f", @value

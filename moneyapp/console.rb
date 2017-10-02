@@ -60,6 +60,11 @@ merchant11 = Merchant.new({
   'location' => "West Bridge Street, Falkirk" 
   })
 
+merchant12 = Merchant.new({
+  'name' => "Mountain Warehouse",
+  'location' => "Gordon Street, Glasgow" 
+  })
+
 merchant1.save()
 merchant2.save()
 merchant3.save()
@@ -71,6 +76,7 @@ merchant8.save()
 merchant9.save()
 merchant10.save()
 merchant11.save()
+merchant12.save()
 
 
 tag1 = Tag.new({
@@ -109,6 +115,10 @@ tag9 = Tag.new({
   'name' => "Treats"
   })
 
+tag10 = Tag.new({
+  'name' => "Health and Exercise"
+  })
+
 tag1.save()
 tag2.save()
 tag3.save()
@@ -118,6 +128,7 @@ tag6.save()
 tag7.save()
 tag8.save()
 tag9.save()
+tag10.save()
 
 
 transaction1 = Transaction.new({
@@ -208,6 +219,38 @@ transaction11 = Transaction.new({
   'merchant_id' => merchant4.id
   })
 
+transaction12 = Transaction.new({
+  'value' => 61.20,
+  'date_id' => "06/16/2017",
+  'comment' => "Yet another weekly shop",
+  'tag_id' => tag1.id,
+  'merchant_id' => merchant2.id
+  })
+
+transaction13 = Transaction.new({
+  'value' => 22.50,
+  'date_id' => "06/10/2017",
+  'comment' => "Brent's birthday!",
+  'tag_id' => tag9.id,
+  'merchant_id' => merchant9.id
+  })
+
+transaction14 = Transaction.new({
+  'value' => 11.50,
+  'date_id' => "05/30/2017",
+  'comment' => "Train tickets to Polmont and back",
+  'tag_id' => tag6.id,
+  'merchant_id' => merchant7.id
+  })
+
+transaction15 = Transaction.new({
+  'value' => 89.99,
+  'date_id' => "05/01/2017",
+  'comment' => "New Walking boots",
+  'tag_id' => tag10.id,
+  'merchant_id' => merchant12.id
+  })
+
 
 transaction1.save()
 transaction2.save()
@@ -220,10 +263,14 @@ transaction8.save()
 transaction9.save()
 transaction10.save()
 transaction11.save()
+transaction12.save()
+transaction13.save()
+transaction14.save()
+transaction15.save()
 
 
 user1 = User.new({
-  'budget' => 700
+  'budget' => 1000
   })
 
 user1.save()
